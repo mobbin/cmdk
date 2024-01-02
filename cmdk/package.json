@@ -1,6 +1,6 @@
 {
-  "name": "cmdk",
-  "version": "1.0.0",
+  "name": "mobbin-cmdk-internal",
+  "version": "0.2.1",
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
