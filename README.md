@@ -1,3 +1,7 @@
+## Mobbin Fixes
+
+- 0.0.1 - fix issue with mouse triggering scroll selected to view
+
 <p align="center">
 <img src="./website/public/og.png" />
 </p>
