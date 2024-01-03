@@ -2,8 +2,8 @@
   "name": "cmdk-root",
   "private": true,
   "scripts": {
-    "build": "pnpm -F mobbin-cmdk-internal build",
-    "dev": "pnpm -F mobbin-cmdk-internal build --watch",
+    "build": "pnpm -F @mobbin/cmdk build",
+    "dev": "pnpm -F @mobbin/cmdk build --watch",
     "website": "pnpm -F cmdk-website dev",
     "testsite": "pnpm -F cmdk-tests dev",
     "format": "prettier '**/*.{js,jsx,ts,tsx,json,md,mdx,css,scss,yaml,yml}' --write",

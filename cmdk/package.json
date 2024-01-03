@@ -1,5 +1,5 @@
 {
-  "name": "mobbin-cmdk-internal",
+  "name": "@mobbin/cmdk",
   "version": "0.2.1",
   "license": "MIT",
   "main": "./dist/index.js",
