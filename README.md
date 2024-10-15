@@ -1,5 +1,6 @@
 ## Mobbin Fixes
 
+- 0.0.2 - rebase on latest cmdk, and bump @radix-ui/react-dialog to 1.1.2
 - 0.0.1 - fix issue with mouse triggering scroll selected to view
 
 <p align="center">
