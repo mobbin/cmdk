@@ -1,28 +1,57 @@
 {
-  "name": "cmdk-root",
-  "private": true,
+  "name": "cmdk",
+  "version": "1.0.0-mobbin.0.0.2",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "build": "pnpm -F @mobbin/cmdk build",
-    "dev": "pnpm -F @mobbin/cmdk build --watch",
-    "website": "pnpm -F cmdk-website dev",
-    "testsite": "pnpm -F cmdk-tests dev",
-    "format": "prettier '**/*.{js,jsx,ts,tsx,json,md,mdx,css,scss,yaml,yml}' --write",
-    "preinstall": "npx only-allow pnpm",
-    "test:format": "prettier '**/*.{js,jsx,ts,tsx,json,md,mdx,css,scss,yaml,yml}' --check",
-    "test": "playwright test"
+    "prepublishOnly": "cp README.md . && yarn build",
+    "postpublish": "rm README.md",
+    "build": "tsup cmdk/src",
+    "dev": "tsup cmdk/src --watch"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-id": "^1.0.1",
+    "@radix-ui/react-primitive": "^2.0.0"
   },
   "devDependencies": {
     "@playwright/test": "1.41.1",
+    "@types/react": "18.0.15",
     "husky": "^8.0.1",
     "lint-staged": "15.2.0",
     "prettier": "2.7.1",
     "tsup": "8.0.1",
     "typescript": "4.6.4"
   },
-  "packageManager": "pnpm@8.8.0",
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,json,md,mdx,css,scss,yaml,yml}": [
-      "prettier --write"
-    ]
-  }
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pacocoursey/cmdk.git",
+    "directory": "cmdk"
+  },
+  "bugs": {
+    "url": "https://github.com/pacocoursey/cmdk/issues"
+  },
+  "homepage": "https://github.com/pacocoursey/cmdk#readme",
+  "author": {
+    "name": "Paco",
+    "url": "https://github.com/pacocoursey"
+  },
+  "packageManager": "yarn@4.5.0"
 }
