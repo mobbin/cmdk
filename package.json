@@ -16,11 +16,7 @@
     }
   },
   "scripts": {
-    "prepublishOnly": "cp README.md . && yarn build",
-    "postpublish": "rm README.md",
-    "build": "tsup cmdk/src",
-    "dev": "tsup cmdk/src --watch",
-    "prepack": "yarn build"
+    "prepack": "tsup cmdk/src"
   },
   "peerDependencies": {
     "react": "^18.0.0",
