@@ -19,7 +19,8 @@
     "prepublishOnly": "cp README.md . && yarn build",
     "postpublish": "rm README.md",
     "build": "tsup cmdk/src",
-    "dev": "tsup cmdk/src --watch"
+    "dev": "tsup cmdk/src --watch",
+    "prepack": "yarn build"
   },
   "peerDependencies": {
     "react": "^18.0.0",
